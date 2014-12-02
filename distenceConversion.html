@@ -1,0 +1,90 @@
+<!doctype html>
+	<head>
+		<title>Distance conversion</title>
+		<script src = "js/distance.js"></script>
+		<style>
+				h3{
+					
+					color:white;
+					background-color:#800000;
+					font-family: verdana;
+					text-align:center;
+
+				}
+				#container{
+					width:25%;
+					background-color:#99FF99;
+					margin:20px;
+					padding:20px;
+					border:3px solid #800000;
+				}
+		</style>
+	</head>
+	<body>
+
+		<div id = "container">
+		<form name="lengthConvert" method="post" action="#"/>
+			<h3>Convert Distance</h3>
+			<div id = "main">
+			<p id ="group0">
+				<label for ="to">Given value</label>
+				<input type = "number" id = "givVal" name = "givVal"/>
+			</p>
+			<p id ="group1">
+			<label for ="to">From</label>
+			<select name = "fromUnit ">
+				<option value = 1>Kilometer</option>
+				<option value = 2>meter</option>
+				<option value = 3>foot</option>
+				<option value = 4>mile</option>
+			</select>
+
+			<label for ="to">To</label>
+			<select name = "toUnit ">
+				<option value = 1>Kilometer</option>
+				<option value = 2>meter</option>
+				<option value = 3>foot</option>
+				<option value = 4>mile</option>
+			</select>
+			</p>
+
+			<p id ="group">
+			<label for ="result">Convert Value</label>
+			<input type = "text" id = "result" name = "result"/>
+			</p>
+			</div>
+			<p id ="group">
+			<input type = "submit" name = "convert" value = "Cognvert..!"onClick="distanceConversion.convertValues.convertValue()"/>
+			</p>
+		</div>
+							<!--script-->
+		<script>
+				var distanceConversion ={};
+
+
+				distanceConversion.convertValues = {
+
+					getValues : function (){
+						var km = 1;
+						var met = 1000;
+						var ft = 3280;
+						var mi = 0.6214;
+						var newArray = [];
+						var GiveV = parseInt (document.getElementById("givVal").value);
+						newArray.push(givVal);
+						return newArray;
+				},
+
+				convertValue : function(){
+					alert("");
+					from_index = document.lengthConvert.fromUnit.selectedIndex;
+					alert(from_index);
+					to_index = document.lengthConvert.toUnit.selectedIndex;
+					document.getElementById("result").value = from_index[0]* to_index[1];
+					
+				},
+
+		}
+		</script>
+	</body>
+</html>
