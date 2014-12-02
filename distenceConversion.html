@@ -33,18 +33,18 @@
 			<p id ="group1">
 			<label for ="to">From</label>
 			<select name = "fromUnit ">
-				<option value = 1>Kilometer</option>
-				<option value = 2>meter</option>
-				<option value = 3>foot</option>
-				<option value = 4>mile</option>
+				<option value = "Kilometer">Kilometer</option>
+				<option value = "meter">meter</option>
+				<option value = "foot">foot</option>
+				<option value = "mile">mile</option>
 			</select>
 
 			<label for ="to">To</label>
 			<select name = "toUnit ">
-				<option value = 1>Kilometer</option>
-				<option value = 2>meter</option>
-				<option value = 3>foot</option>
-				<option value = 4>mile</option>
+				<option value = "Kilometer">Kilometer</option>
+				<option value = "meter">meter</option>
+				<option value = "foot">foot</option>
+				<option value = "mile">mile</option>
 			</select>
 			</p>
 
@@ -62,7 +62,7 @@
 				var distanceConversion ={};
 
 
-				distanceConversion.convertValues = {
+			distanceConversion.convertValues = {
 
 					getValues : function (){
 						var km = 1;
@@ -76,7 +76,7 @@
 				},
 
 				convertValue : function(){
-					alert("");
+					alert("selectedIndex");
 					from_index = document.lengthConvert.fromUnit.selectedIndex;
 					alert(from_index);
 					to_index = document.lengthConvert.toUnit.selectedIndex;
